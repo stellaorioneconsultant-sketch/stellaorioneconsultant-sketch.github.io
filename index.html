@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Consulenze di cartomanzia e numerologia con Stella Orione: prenota il tuo consulto, scrivi su WhatsApp o prova i calcolatori gratuiti.">
+<script data-goatcounter="https://stellaorione.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<title>Stella Orione</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<style>
+  :root{
+    --ink:#150F19;
+    --ink-2:#1D1522;
+    --ink-3:#110B15;
+    --panel:#1F1725;
+    --line:rgba(201,162,75,0.22);
+    --line-soft:rgba(239,230,216,0.10);
+    --gold:#C9A24B;
+    --gold-bright:#E3C077;
+    --violet:#6E4E8C;
+    --violet-deep:#402B57;
+    --lilac:#C9B7DE;
+    --pastel-yellow:#E7D9A6;
+    --pastel-blue:#A9C2CE;
+    --cream:#EFE6D8;
+    --cream-dim:#C9BFCB;
+    --text:var(--cream);
+    --text-dim:var(--cream-dim);
+    --bg:var(--ink);
+    --surface:var(--panel);
+    --surface-2:var(--ink-2);
+    --accent:var(--gold);
+    --accent-bright:var(--gold-bright);
+  }
+
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#F8F2E7;
+      --surface:#FFFFFF;
+      --surface-2:#F1E9D9;
+      --text:#2B2131;
+      --text-dim:#5C4F60;
+      --line:rgba(120,86,26,0.25);
+      --line-soft:rgba(43,33,49,0.12);
+      --gold:#A97F2E;
+      --gold-bright:#8A661F;
+      --violet:#6E4E8C;
+      --violet-deep:#4B3567;
+      --lilac:#8E72AE;
+      --pastel-yellow:#8A7530;
+      --pastel-blue:#4C7385;
+      --cream:#2B2131;
+      --cream-dim:#5C4F60;
+      --accent:var(--gold);
+      --accent-bright:var(--gold-bright);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:var(--ink);
+    --surface:var(--panel);
+    --surface-2:var(--ink-2);
+    --text:var(--cream);
+    --text-dim:var(--cream-dim);
+    --accent:var(--gold);
+    --accent-bright:var(--gold-bright);
+  }
+  :root[data-theme="light"]{
+    --bg:#F8F2E7;
+    --surface:#FFFFFF;
+    --surface-2:#F1E9D9;
+    --text:#2B2131;
+    --text-dim:#5C4F60;
+    --line:rgba(120,86,26,0.25);
+    --line-soft:rgba(43,33,49,0.12);
+    --gold:#A97F2E;
+    --gold-bright:#8A661F;
+    --lilac:#8E72AE;
+    --pastel-yellow:#8A7530;
+    --pastel-blue:#4C7385;
+    --cream:#2B2131;
+    --cream-dim:#5C4F60;
+    --accent:var(--gold);
+    --accent-bright:var(--gold-bright);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-size:19px;
+    line-height:1.6;
+  }
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,56px);}
+
+  h1,h2,h3{
+    font-family:'Cinzel', Georgia, serif;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-wrap:balance;
+    margin:0;
+    color:var(--text);
+  }
+
+  .eyebrow{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:0.95rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+
+  a{color:inherit;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:min(96vh,860px);
+    display:flex;
+    align-items:flex-end;
+    background:#0c0810;
+    overflow:hidden;
+  }
+  .hero__img{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:70% 30%;
+    opacity:0.9;
+  }
+  .hero__scrim{
+    position:absolute;inset:0;
+    background:
+      linear-gradient(180deg, rgba(12,8,16,0.55) 0%, rgba(12,8,16,0.35) 30%, rgba(12,8,16,0.88) 78%, #0c0810 100%),
+      linear-gradient(90deg, rgba(12,8,16,0.75) 0%, rgba(12,8,16,0.15) 55%, rgba(12,8,16,0.55) 100%);
+  }
+  .hero__content{
+    position:relative;
+    width:100%;
+    padding:min(14vh,140px) clamp(20px,5vw,56px) 64px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+  }
+  .hero__mark{
+    font-size:clamp(2.6rem,7vw,4.6rem);
+    color:var(--cream-hero,#F3EADB);
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+  }
+  :root{ --cream-hero:#F3EADB; }
+  .hero__sub{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.2rem,2.5vw,1.65rem);
+    color:#FBEFCE;
+    letter-spacing:0.04em;
+    text-shadow:0 0 18px rgba(227,192,119,0.55), 0 1px 3px rgba(0,0,0,0.5);
+  }
+  .hero__rule{
+    width:64px;height:1px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  }
+  .hero__tagline{
+    max-width:46ch;
+    color:#E9E0D2;
+    font-size:1.15rem;
+  }
+  .hero__ctas{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+    margin-top:10px;
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    font-family:'Cinzel', serif;
+    font-size:0.82rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:2px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+    border:1px solid transparent;
+    cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;}
+  .btn--gold{
+    background:linear-gradient(180deg,var(--gold-bright),var(--gold));
+    color:#221607;
+  }
+  .btn--gold:hover{background:linear-gradient(180deg,#EFD48F,var(--gold-bright));}
+  .btn--ghost{
+    background:transparent;
+    border-color:rgba(243,234,219,0.55);
+    color:#F3EADB;
+  }
+  .btn--ghost:hover{border-color:var(--gold-bright);color:var(--gold-bright);}
+  .btn--line{
+    background:transparent;
+    border-color:var(--line);
+    color:var(--text);
+  }
+  .btn--line:hover{border-color:var(--gold);color:var(--gold);}
+  .btn--small{padding:11px 20px;font-size:0.72rem;}
+
+  /* ---------- INTRO ---------- */
+  .intro{
+    padding:88px 0 64px;
+    text-align:center;
+  }
+  .intro__body{
+    max-width:56ch;
+    margin:22px auto 0;
+    color:var(--text-dim);
+    font-size:1.2rem;
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services{padding:24px 0 100px;}
+  .services__head{text-align:center;margin-bottom:56px;}
+  .services__head h2{font-size:clamp(1.7rem,3.4vw,2.3rem);margin-top:10px;}
+
+  .service{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 300px;
+    gap:40px;
+    padding:44px 0;
+    border-top:1px solid var(--line-soft);
+  }
+  .service:last-child{border-bottom:1px solid var(--line-soft);}
+  .service__num{
+    font-family:'Cinzel', serif;
+    font-size:0.85rem;
+    letter-spacing:0.12em;
+    color:var(--accent);
+  }
+  .service__title{
+    font-size:clamp(1.25rem,2.2vw,1.55rem);
+    margin-top:8px;
+    line-height:1.25;
+  }
+  .service__meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 18px;
+    margin-top:14px;
+    font-family:'Cinzel', serif;
+    font-size:0.7rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+  }
+  .service__meta span{white-space:nowrap;}
+  .service__desc{margin-top:18px;color:var(--text-dim);max-width:62ch;}
+  .service__list{
+    list-style:none;
+    margin:18px 0 0;
+    padding:0;
+    display:grid;
+    gap:9px;
+    max-width:62ch;
+  }
+  .service__list li{
+    position:relative;
+    padding-left:20px;
+    color:var(--text-dim);
+  }
+  .service__list li::before{
+    content:"";
+    position:absolute;left:0;top:0.65em;
+    width:6px;height:6px;
+    background:var(--accent);
+    transform:rotate(45deg);
+  }
+  .service__side{
+    border-left:1px solid var(--line-soft);
+    padding-left:36px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:16px;
+  }
+  .service__price{
+    font-family:'Cinzel', serif;
+    font-size:2rem;
+    color:var(--accent);
+  }
+  .service__price small{
+    display:block;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:0.9rem;
+    color:var(--text-dim);
+    margin-top:4px;
+  }
+  .service__side .btn{justify-content:center;}
+
+  @media (max-width:760px){
+    .service{grid-template-columns:1fr;gap:22px;}
+    .service__side{border-left:none;padding-left:0;border-top:1px solid var(--line-soft);padding-top:22px;}
+  }
+
+  /* ---------- STRUMENTI ---------- */
+  .tools{padding:88px 0 80px;border-bottom:1px solid var(--line-soft);background:var(--bg);}
+  .tools__head{text-align:center;margin-bottom:36px;}
+  .tools__head h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-top:10px;}
+  .tools__head p{color:var(--text-dim);max-width:60ch;margin:14px auto 0;}
+  .tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:34px;}
+  .tab{font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:12px 20px;border:1px solid var(--line);background:transparent;color:var(--text-dim);cursor:pointer;border-radius:2px;transition:all .2s;}
+  .tab:hover{color:var(--gold);border-color:var(--gold);}
+  .tab.is-active{background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:#221607;border-color:transparent;}
+  .tool{display:none;}
+  .tool.is-active{display:block;}
+  .tool__form{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;align-items:end;max-width:760px;margin:0 auto 34px;}
+  .tool__form label{display:flex;flex-direction:column;gap:6px;font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);}
+  .tool__form input{font-family:'Cormorant Garamond',serif;font-size:1.05rem;padding:12px 14px;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:2px;width:100%;}
+  .tool__form input:focus{outline:none;border-color:var(--gold);}
+  .tool__form .btn{justify-content:center;height:48px;}
+  .tool__form .full{grid-column:1/-1;}
+  .tool__form legend{grid-column:1/-1;font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.12em;color:var(--accent);padding:0;margin:8px 0 -4px;}
+  .tool__result{display:none;}
+  .tool__result.is-show{display:block;}
+  .panel{background:var(--surface);border:1px solid var(--line-soft);border-radius:4px;padding:28px;margin:0 auto 18px;max-width:860px;}
+  .panel h3{font-size:1.05rem;letter-spacing:0.08em;color:var(--accent);}
+  .panel p.desc{color:var(--text-dim);margin:8px 0 18px;max-width:60ch;}
+  .who{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:12px;}
+  .who b{color:var(--text);font-weight:600;}
+  .matrix svg{width:100%;height:auto;display:block;max-width:640px;margin:0 auto;}
+  .matrix svg text{font-family:'Cormorant Garamond',serif;fill:var(--text);}
+  .matrix svg text.n{font-weight:600;}
+  .matrix svg text.age{font-family:'Cinzel',serif;fill:var(--text-dim);}
+  .matrix svg text.tick{fill:var(--text-dim);}
+  .bub{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;border-radius:50%;background:var(--surface-2);border:1px solid var(--line);font-family:'Cinzel',serif;font-size:1.25rem;color:var(--text);}
+  .bub.big{width:68px;height:68px;font-size:1.55rem;border-color:var(--gold);color:var(--accent);}
+  .pair{display:flex;align-items:center;gap:40px;flex-wrap:wrap;}
+  .pcol{display:flex;flex-direction:column;gap:12px;}
+  .prow{display:flex;align-items:center;gap:14px;}
+  .prow span{min-width:60px;font-style:italic;color:var(--text-dim);}
+  .genrow{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid var(--line-soft);}
+  .genrow:last-child{border-bottom:none;}
+  .genrow span{color:var(--text);}
+  .bubbles{display:flex;gap:8px;}.bubbles .bub{width:46px;height:46px;font-size:1.05rem;}
+  table.chk{width:100%;border-collapse:collapse;}
+  table.chk th{font-family:'Cinzel',serif;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);text-align:left;padding:0 8px 12px;border-bottom:1px solid var(--line);}
+  table.chk td{padding:12px 8px;border-bottom:1px solid var(--line-soft);}
+  table.chk td.idx{width:36px;text-align:center;color:#fff;font-family:'Cinzel',serif;font-size:0.85rem;}
+  table.chk td.v,table.chk th.v{text-align:center;}
+  table.chk td.v{font-family:'Cinzel',serif;color:var(--accent);}
+  table.chk tr.tot td{border-bottom:none;font-weight:600;border-top:1px solid var(--line);}
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;}
+  .kpi{text-align:center;padding:22px 12px;border:1px solid var(--line-soft);border-radius:4px;background:var(--surface-2);}
+  .kpi .k{font-family:'Cinzel',serif;font-size:2.1rem;color:var(--accent);line-height:1;}
+  .kpi .k small{font-size:1rem;color:var(--text-dim);margin-left:4px;}
+  .kpi .l{font-family:'Cinzel',serif;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-top:10px;}
+  .kpi .m{font-style:italic;color:var(--text-dim);margin-top:6px;font-size:0.95rem;}
+  .letters{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;}
+  .letters span{display:inline-flex;flex-direction:column;align-items:center;min-width:30px;padding:6px 4px;border:1px solid var(--line-soft);border-radius:2px;font-size:0.95rem;}
+  .letters span i{font-style:normal;font-family:'Cinzel',serif;font-size:0.75rem;color:var(--accent);margin-top:2px;}
+  .tool__cta{text-align:center;margin-top:12px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .tool__note{text-align:center;font-style:italic;color:var(--text-dim);font-size:0.9rem;max-width:60ch;margin:20px auto 0;}
+  .freq{text-align:center;}
+  .freq__label{font-style:italic;color:var(--text-dim);font-size:1.15rem;margin:0 0 8px;}
+  .freq__num{font-family:'Cinzel',serif;font-size:3rem;color:var(--accent);line-height:1.1;}
+  .freq__num small{font-size:1.6rem;}
+  .freq__meaning{font-style:italic;color:var(--text-dim);margin:10px auto 0;max-width:46ch;}
+  .freq .letters{justify-content:center;}
+  .ctable{text-align:center;}
+  .ctable__title{font-family:'Cinzel',serif;font-size:0.95rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--text);padding-bottom:14px;margin-bottom:18px;border-bottom:1px solid var(--line);}
+  .ctable__grid{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;max-width:520px;margin:0 auto;font-family:'Cormorant Garamond',serif;}
+  .ctable__grid .h{font-family:'Cinzel',serif;font-size:1.3rem;color:var(--accent);padding-bottom:6px;}
+  .ctable__grid .l{font-size:1.25rem;line-height:1.7;color:var(--text);}
+  .ctable__foot{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);margin-top:18px;}
+  .heart{text-align:center;font-size:3rem;color:#B85C6E;line-height:1;margin:6px 0 22px;}
+  @media print{
+    @page{margin:12mm;}
+    body{background:#fff!important;color:#111!important;}
+    body>*:not(.tools){display:none!important;}
+    .tools{padding:0!important;border:none!important;background:#fff!important;}
+    .tools>.wrap>*:not(.tool.is-active){display:none!important;}
+    .tool.is-active>*:not(.tool__result){display:none!important;}
+    .tool__cta{display:none!important;}
+    .tool__result{display:block!important;}
+    .panel{break-inside:avoid;page-break-inside:avoid;border-color:#ccc!important;background:#fff!important;margin-bottom:10mm;}
+    .matrix svg{max-width:178mm!important;}
+    .heart{break-after:avoid;}
+    .bub{background:#f3f0ea!important;border-color:#999!important;color:#111!important;}
+    .bub.big{color:#8A661F!important;}
+    table.chk td.v,.panel h3,.freq__num{color:#8A661F!important;}
+    table.chk td,table.chk th,.prow span,.genrow span,.desc,.who,.who b,.freq__label,.freq__meaning{color:#111!important;}
+  }
+
+  /* ---------- ABOUT STRIP ---------- */
+  .strip{
+    background:var(--surface-2);
+    border-top:1px solid var(--line-soft);
+    border-bottom:1px solid var(--line-soft);
+    padding:72px 0;
+  }
+  .strip__grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:32px;
+    text-align:center;
+  }
+  .strip__grid h3{
+    font-size:0.95rem;
+    letter-spacing:0.1em;
+    color:var(--accent);
+  }
+  .strip__grid p{
+    margin:12px 0 0;
+    color:var(--text-dim);
+    font-size:1.05rem;
+  }
+  @media (max-width:700px){
+    .strip__grid{grid-template-columns:1fr;gap:36px;}
+  }
+
+  /* ---------- TESTIMONIALS (scrolling marquee) ---------- */
+  .testimonials{padding:24px 0 100px;}
+  .marquee{
+    position:relative;
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+  }
+  .marquee__track{
+    display:flex;
+    width:max-content;
+    animation:marquee-scroll 130s linear infinite;
+  }
+  .marquee:hover .marquee__track,
+  .marquee:focus-within .marquee__track{
+    animation-play-state:paused;
+  }
+  .marquee__set{
+    display:flex;
+    gap:24px;
+    flex-shrink:0;
+    padding-right:24px;
+  }
+  @keyframes marquee-scroll{
+    from{ transform:translateX(0); }
+    to{ transform:translateX(-50%); }
+  }
+  .quote-card{
+    flex:0 0 340px;
+    background:var(--surface);
+    border:1px solid var(--line-soft);
+    padding:34px 30px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .quote-card__mark{
+    font-family:'Cinzel', serif;
+    font-size:2.2rem;
+    line-height:1;
+    color:var(--accent);
+    opacity:0.6;
+  }
+  .quote-card__text{
+    font-style:italic;
+    font-size:1.03rem;
+    line-height:1.55;
+    color:var(--text);
+  }
+  .quote-card__attr{
+    font-family:'Cinzel', serif;
+    font-size:0.68rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    padding-top:12px;
+    border-top:1px solid var(--line-soft);
+    margin-top:auto;
+  }
+  @media (max-width:640px){
+    .quote-card{flex-basis:280px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .marquee__track{animation:none;}
+    .marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none;}
+    .marquee__set[aria-hidden="true"]{display:none;}
+  }
+
+  /* ---------- FINAL CTA ---------- */
+  .final{
+    padding:96px 0;
+    text-align:center;
+  }
+  .final h2{font-size:clamp(1.7rem,3.6vw,2.5rem);}
+  .final p{
+    max-width:50ch;
+    margin:18px auto 34px;
+    color:var(--text-dim);
+    font-size:1.15rem;
+  }
+  .final__ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+
+  /* ---------- FOOTER ----------
+     Deliberately theme-independent: a fixed dark band with bright
+     cream/gold text, so legibility never depends on light/dark mode. */
+  footer{
+    background:#110B15;
+    border-top:1px solid rgba(201,162,75,0.28);
+    padding:56px 0 40px;
+  }
+  .foot__mark{
+    font-family:'Cinzel', serif;
+    letter-spacing:0.14em;
+    font-size:1.05rem;
+    text-align:center;
+    color:#F6EEDD;
+  }
+  .foot__social{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    margin:26px 0 34px;
+  }
+  .foot__social a{
+    width:42px;height:42px;
+    border:1px solid rgba(201,162,75,0.4);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    color:#F6EEDD;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .foot__social a:hover{border-color:#E3C077;color:#E3C077;}
+  .foot__social svg{width:18px;height:18px;fill:currentColor;}
+
+  .foot__legal{
+    text-align:center;
+    color:#F6EEDD;
+    font-weight:500;
+    font-size:0.98rem;
+    line-height:1.9;
+    max-width:52ch;
+    margin:0 auto;
+  }
+  .foot__legal a{text-decoration:underline;text-underline-offset:3px;color:#E3C077;}
+  .foot__disclaimer{
+    text-align:center;
+    color:#D9CFC0;
+    font-size:0.83rem;
+    max-width:56ch;
+    margin:26px auto 0;
+    font-style:italic;
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .btn{transition:none;}
+  }
+</style>
+</head>
+<body>
+<section class="hero">
+  <img class="hero__img" src="hero.webp" alt="" width="760" height="1351" fetchpriority="high" decoding="async" />
+  <div class="hero__scrim"></div>
+  <div class="hero__content">
+    <h1 class="hero__mark">Stella Orione</h1>
+    <div class="hero__sub">Cartomanzia &amp; Numerologia</div>
+    <div class="hero__rule"></div>
+    <p class="hero__tagline">Il Destino è una traccia, tocca a te scrivere la tua storia.</p>
+    <div class="hero__ctas">
+      <a class="btn btn--gold" href="https://wa.me/393770993956?text=Ciao%20Stella%20Orione%2C%20vorrei%20pi%C3%B9%20informazioni%20sui%20tuoi%20servizi%2C%20grazie%21%20%3A%29" target="_blank" rel="noopener">Scrivimi su WhatsApp</a>
+      <a class="btn btn--ghost" href="https://tinyurl.com/stellaorionecalendar" target="_blank" rel="noopener">Prenota un consulto</a>
+    </div>
+  </div>
+</section>
+
+<section class="tools" id="strumenti">
+  <div class="wrap">
+    <div class="tools__head">
+      <div class="eyebrow">Strumenti gratuiti</div>
+      <h2>Scopri i tuoi numeri</h2>
+      <p>Tre calcolatori per una prima lettura di te: la Matrice del Destino, la vibrazione del tuo nome secondo la numerologia caldea e la Matrice di Coppia.</p>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab is-active" data-tool="matrice">Matrice del Destino</button>
+      <button class="tab" data-tool="caldea">Numerologia Caldea</button>
+      <button class="tab" data-tool="coppia">Matrice di Coppia</button>
+    </div>
+
+    <!-- MATRICE -->
+    <div class="tool is-active" id="tool-matrice">
+      <form class="tool__form" id="f-matrice">
+        <label>Nome<input type="text" id="m-nome" placeholder="Il tuo nome"></label>
+        <label>Data di nascita<input type="date" id="m-data" required min="1900-01-01" max="2030-12-31"></label>
+        <button type="submit" class="btn btn--gold btn--small">Calcola</button>
+      </form>
+      <div class="tool__result" id="r-matrice">
+        <div class="panel matrix">
+          <div class="who"><span id="m-who"></span><span>Nascita <b id="m-date"></b></span><span>Età <b id="m-age"></b></span></div>
+          <svg id="m-svg" viewBox="0 0 600 600"></svg>
+        </div>
+        <div class="panel">
+          <h3>Carta del benessere</h3>
+          <table class="chk"><thead><tr><th></th><th>Nome del chakra</th><th class="v">Fisica</th><th class="v">Energia</th><th class="v">Emozioni</th></tr></thead><tbody id="m-chakra"></tbody></table>
+        </div>
+        <div class="panel">
+          <div class="genrow"><span>Programma generazionale maschile</span><div class="bubbles" id="m-genM"></div></div>
+          <div class="genrow"><span>Programma generazionale femminile</span><div class="bubbles" id="m-genF"></div></div>
+        </div>
+        <div class="panel"><h3>Ricerca di se stesso</h3><p class="desc">L'unione tra maschile e femminile. Le capacità e abilità.</p>
+          <div class="pair"><div class="pcol"><div class="prow"><span>Cielo:</span><b class="bub" id="m-cielo"></b></div><div class="prow"><span>Terra:</span><b class="bub" id="m-terra"></b></div></div><b class="bub big" id="m-pers"></b></div></div>
+        <div class="panel"><h3>Scopo sociale</h3><p class="desc">Programma socio-familiare. Cosa puoi fare per te e gli altri?</p>
+          <div class="pair"><div class="pcol"><div class="prow"><span>M:</span><b class="bub" id="m-M"></b></div><div class="prow"><span>F:</span><b class="bub" id="m-F"></b></div></div><b class="bub big" id="m-soc"></b></div></div>
+        <div class="panel"><h3>Scopo principale della vita</h3><p class="desc">Il compito per il quale sei nato. L'anima tenderà tutta la vita a realizzare questo compito.</p><b class="bub big" id="m-spir"></b></div>
+        <div class="tool__cta">
+          <button type="button" class="btn btn--line btn--small" id="m-pdf">Scarica in PDF</button>
+          <a class="btn btn--gold btn--small" href="#servizi">Vuoi la lettura completa?</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CALDEA -->
+    <div class="tool" id="tool-caldea">
+      <form class="tool__form" id="f-caldea">
+        <label>Nome<input type="text" id="c-nome" required placeholder="Nome"></label>
+        <label>Secondo nome<input type="text" id="c-nome2" placeholder="Facoltativo"></label>
+        <label>Cognome<input type="text" id="c-cognome" required placeholder="Cognome"></label>
+        <button type="submit" class="btn btn--gold btn--small">Calcola</button>
+      </form>
+      <div class="tool__result" id="r-caldea">
+        <div class="panel freq">
+          <p class="freq__label">Il tuo nome e cognome hanno frequenza:</p>
+          <div class="freq__num" id="c-freq"></div>
+          <p class="freq__meaning" id="c-mean"></p>
+          <div class="letters" id="c-letters"></div>
+        </div>
+        <div class="tool__cta"><a class="btn btn--gold btn--small" href="#servizi">Approfondisci con un consulto</a></div>
+      </div>
+      <div class="panel ctable" id="c-table">
+        <div class="ctable__title">Tabella numerologica caldea</div>
+        <div class="ctable__grid" id="c-grid"></div>
+        <div class="ctable__foot">Stella Orione</div>
+      </div>
+      <div class="tool__cta"><button type="button" class="btn btn--line btn--small" id="c-dl">Scarica la tabella</button></div>
+    </div>
+
+    <!-- COPPIA -->
+    <div class="tool" id="tool-coppia">
+      <form class="tool__form" id="f-coppia">
+        <legend>Prima persona</legend>
+        <label>Nome<input type="text" id="p1-nome" placeholder="Nome"></label>
+        <label>Data di nascita<input type="date" id="p1-data" required min="1900-01-01" max="2030-12-31"></label>
+        <legend>Seconda persona</legend>
+        <label>Nome<input type="text" id="p2-nome" placeholder="Nome"></label>
+        <label>Data di nascita<input type="date" id="p2-data" required min="1900-01-01" max="2030-12-31"></label>
+        <button type="submit" class="btn btn--gold btn--small full">Calcola la coppia</button>
+      </form>
+      <div class="tool__result" id="r-coppia">
+        <div class="panel matrix"><div class="who"><span>Matrice di <b id="cp-n1"></b></span><span>Nascita <b id="cp-d1"></b></span></div><svg id="cp-svg1" viewBox="0 0 600 600"></svg></div>
+        <div class="heart" aria-hidden="true">&#9825;</div>
+        <div class="panel matrix"><div class="who"><span>Matrice di <b id="cp-n2"></b></span><span>Nascita <b id="cp-d2"></b></span></div><svg id="cp-svg2" viewBox="0 0 600 600"></svg></div>
+        <div class="panel matrix"><h3 style="text-align:center;margin-bottom:14px">Matrice di Coppia</h3><div class="who" style="justify-content:center"><span><b id="cp-who"></b></span></div><svg id="cp-svg" viewBox="0 0 600 600"></svg></div>
+        <div class="tool__cta">
+          <button type="button" class="btn btn--line btn--small" id="cp-pdf">Scarica in PDF</button>
+          <a class="btn btn--gold btn--small" href="#servizi">Richiedi la lettura di coppia</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="tool__note">Strumenti pensati come prima lettura e spunto di riflessione. Per un'analisi completa e personalizzata, scopri i miei consulti.</p>
+    <div class="tool__cta" style="margin-top:22px"><a class="btn btn--gold" href="#servizi">Scopri i consulti</a></div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="eyebrow">Chi sono</div>
+    <p class="intro__body">Accompagno le persone in un percorso di consapevolezza attraverso Cartomanzia e Numerologia Comportamentale, unendo intuizione e metodo per offrirti letture chiare, concrete e su misura per la tua situazione.</p>
+    <p class="intro__body">Da oltre 14 anni affianco chi attraversa momenti delicati nella vita di coppia, in amore e nel proprio percorso di crescita personale: non solo una lettura, ma una visione d'insieme e strumenti concreti da portare nella vita di ogni giorno.</p>
+  </div>
+</section>
+
+<section class="services" id="servizi">
+  <div class="wrap">
+    <div class="services__head">
+      <div class="eyebrow">I miei servizi</div>
+      <h2>Consulenze su misura per te</h2>
+    </div>
+
+    <!-- 1 -->
+    <div class="service">
+      <div>
+        <h3 class="service__title">Consulto in chiamata, 45 minuti — Carte Romagnole</h3>
+        <div class="service__meta"><span>45 minuti</span><span>Audio o video</span><span>Resoconto PDF incluso</span></div>
+        <p class="service__desc">Un consulto su misura per esplorare con attenzione la tua situazione attuale e le tue domande principali, lavorando con le Carte Romagnole e altri mazzi.</p>
+        <ul class="service__list">
+          <li>Consulto in chiamata di 45 minuti dedicato a te</li>
+          <li>Analisi delle tue domande e chiarimenti sulle energie che ti circondano</li>
+          <li>Spazio per approfondire dubbi e sviluppi emersi durante la lettura</li>
+          <li>Al termine, resoconto trascritto della call in PDF in omaggio</li>
+        </ul>
+      </div>
+      <div class="service__side">
+        <div class="service__price">50 €<small>In chiamata o videochiamata</small></div>
+        <a class="btn btn--gold btn--small" href="https://wa.me/393770993956?text=Ciao%20Stella%20Orione%2C%20vorrei%20prenotare%20il%20Consulto%20in%20chiamata%20di%2045%20minuti%20(Carte%20Romagnole)." target="_blank" rel="noopener">Richiedi su WhatsApp</a>
+        <a class="btn btn--line btn--small" href="https://tinyurl.com/stellaorionecalendar" target="_blank" rel="noopener">Vedi il calendario</a>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="service">
+      <div>
+        <h3 class="service__title">Consulto in chiamata, 1 ora — Carte Romagnole e Numerologia</h3>
+        <div class="service__meta"><span>1 ora</span><span>Telefono o app concordata</span><span>Resoconto PDF incluso</span></div>
+        <p class="service__desc">Un'esperienza interattiva e approfondita per chi desidera una guida completa: la lettura delle Carte Romagnole si unisce all'analisi numerologica per una visione chiara e multilivello.</p>
+        <ul class="service__list">
+          <li>1 ora di chiamata dedicata solo a te</li>
+          <li>Lettura con Carte Romagnole e Numerologia insieme</li>
+          <li>Possibilità di fare domande in tempo reale</li>
+          <li>Analisi personalizzata, utile per situazioni pratiche e per il tuo percorso interiore</li>
+          <li>Al termine, resoconto trascritto della call in PDF in omaggio</li>
+        </ul>
+      </div>
+      <div class="service__side">
+        <div class="service__price">75 €<small>Telefono o app concordata</small></div>
+        <a class="btn btn--gold btn--small" href="https://wa.me/393770993956?text=Ciao%20Stella%20Orione%2C%20vorrei%20prenotare%20il%20Consulto%20in%20chiamata%20di%201%20ora%20(Carte%20Romagnole%20e%20Numerologia)." target="_blank" rel="noopener">Richiedi su WhatsApp</a>
+        <a class="btn btn--line btn--small" href="https://tinyurl.com/stellaorionecalendar" target="_blank" rel="noopener">Vedi il calendario</a>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="service">
+      <div>
+        <h3 class="service__title">Orbita Relazionale — consulto in chiamata, 50 minuti</h3>
+        <div class="service__meta"><span>50 minuti</span><span>In chiamata o videochiamata</span><span>Report PDF incluso</span></div>
+        <p class="service__desc">Quando una relazione pone più domande che risposte, questo consulto ti aiuta a capire meglio cosa sta accadendo tra te e l'altra persona. Attraverso l'incontro tra Numerologia e Carte, esploriamo la vostra dinamica per portare alla luce i meccanismi che la caratterizzano, gli schemi che si ripetono e il nodo che oggi merita più attenzione.</p>
+        <ul class="service__list">
+          <li>Analisi numerologica della relazione: punti di incontro e possibili aree di tensione</li>
+          <li>Lettura delle Carte per approfondire la situazione attuale da una prospettiva più ampia</li>
+          <li>Individuazione del nodo centrale della dinamica che stai vivendo</li>
+          <li>Sintesi finale con le chiavi di lettura più importanti emerse durante la sessione</li>
+          <li>Al termine, un PDF personale con la sintesi del consulto</li>
+        </ul>
+      </div>
+      <div class="service__side">
+        <div class="service__price">70 €<small>In chiamata o videochiamata</small></div>
+        <a class="btn btn--gold btn--small" href="https://wa.me/393770993956?text=Ciao%20Stella%20Orione%2C%20vorrei%20richiedere%20il%20consulto%20Orbita%20Relazionale." target="_blank" rel="noopener">Richiedi su WhatsApp</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="testimonials">
+  <div class="wrap">
+    <div class="services__head">
+      <div class="eyebrow">Testimonianze</div>
+      <h2>Chi mi ha scritto</h2>
+    </div>
+    <div class="marquee">
+      <div class="marquee__track">
+        <div class="marquee__set">
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Questo consulto è bellissimo, c'è tutto quello che uno vuole sapere. Maria, tu non mi crederai: ho ascoltato le parole della mia collega ma non ho battuto ciglio, perché ho pensato "ora ci pensa Maria". Mi illumini sempre la via, hai confermato tutto ciò che vedevamo... e la parte della numerologia è verissima e interessantissima. Meno male che ci sei tu nella mia vita.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Volevo farti sapere quanto immensa sei. Ormai mi fido di te da diversi anni, eppure riesci ancora a stupirmi: quando mi succede qualcosa che mi avevi previsto, mi risuona in mente tutto ciò che mi avevi detto, ed ecco che la tua previsione si è manifestata. Non sei mai troppa, non sei mai scortese, usi sempre le parole giuste. Per me sei preziosa, meglio di un diamante.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Quando ti ho consultata la prima volta pensavo fossi una delle tante, invece non sei solo una persona che si ferma al consulto: mi hai dato coraggio e forza nei miei momenti bui, quando ti scrivevo disperata e in lacrime, e tu invece di ignorarmi mi hai ascoltato e mi hai fatta sentire capita. Sei una guida.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Volevo dirti che oggi sei stata straordinaria: in realtà mi hai detto quello che già sapevo, ma non ammettevo. Mi ha fatto tanto bene la conversazione avuta, sono più leggera per quello che mi hai confermato. Sono più che sicura che torneremo a sentirci.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Sono riuscita ad ascoltarlo solo ora... mi sei entrata letteralmente nella mente: tutto ciò che non riuscivo a esprimere io, l'hai fatto tu. È così che mi sento. Cercherò con tutta me stessa di dare più valore a me e di amarmi di più. Grazie di cuore.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Avevi previsto che ci saremmo rivisti, e infatti resta il fatto che grazie a te e alle "mazzate" che mi dai il cambiamento è avvenuto in me: accetto la situazione con consapevolezza e leggerezza. Ci ho riflettuto e ho voluto dirtelo, grazie.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Quando dico che sei meglio di uno psicologo è la verità: ieri in fase di consulto sei stata capace di farmi emozionare ed esternare quello che mi portavo dentro. Tu sei unica e non smetterò mai di dirtelo.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Non sei solo una cartomante, sei anche una persona empatica che va al di là del consulto. Le tue parole mi hanno rincuorato, anche nei momenti più difficili.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Sei diventata il mio mentore, la mia seduta psicologica — e io stessa lo sono! Grazie per tutti i tuoi consigli, sono sempre stati preziosi. Hai sempre una parola gentile e confortante, e tante cose che mi hai suggerito mi hanno dato una svolta nella vita. Sei una brava persona, onesta, schietta, e fai il tuo lavoro con tanta empatia e dedizione.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Ti ringrazio per tutto quello che hai fatto: mi hai aiutato tantissimo in questi due anni che ci conosciamo, in questo mio percorso di crescita personale, con consigli sempre giusti e appropriati.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+        </div>
+        <div class="marquee__set" aria-hidden="true">
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Questo consulto è bellissimo, c'è tutto quello che uno vuole sapere. Maria, tu non mi crederai: ho ascoltato le parole della mia collega ma non ho battuto ciglio, perché ho pensato "ora ci pensa Maria". Mi illumini sempre la via, hai confermato tutto ciò che vedevamo... e la parte della numerologia è verissima e interessantissima. Meno male che ci sei tu nella mia vita.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Volevo farti sapere quanto immensa sei. Ormai mi fido di te da diversi anni, eppure riesci ancora a stupirmi: quando mi succede qualcosa che mi avevi previsto, mi risuona in mente tutto ciò che mi avevi detto, ed ecco che la tua previsione si è manifestata. Non sei mai troppa, non sei mai scortese, usi sempre le parole giuste. Per me sei preziosa, meglio di un diamante.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Quando ti ho consultata la prima volta pensavo fossi una delle tante, invece non sei solo una persona che si ferma al consulto: mi hai dato coraggio e forza nei miei momenti bui, quando ti scrivevo disperata e in lacrime, e tu invece di ignorarmi mi hai ascoltato e mi hai fatta sentire capita. Sei una guida.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Volevo dirti che oggi sei stata straordinaria: in realtà mi hai detto quello che già sapevo, ma non ammettevo. Mi ha fatto tanto bene la conversazione avuta, sono più leggera per quello che mi hai confermato. Sono più che sicura che torneremo a sentirci.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Sono riuscita ad ascoltarlo solo ora... mi sei entrata letteralmente nella mente: tutto ciò che non riuscivo a esprimere io, l'hai fatto tu. È così che mi sento. Cercherò con tutta me stessa di dare più valore a me e di amarmi di più. Grazie di cuore.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Avevi previsto che ci saremmo rivisti, e infatti resta il fatto che grazie a te e alle "mazzate" che mi dai il cambiamento è avvenuto in me: accetto la situazione con consapevolezza e leggerezza. Ci ho riflettuto e ho voluto dirtelo, grazie.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Quando dico che sei meglio di uno psicologo è la verità: ieri in fase di consulto sei stata capace di farmi emozionare ed esternare quello che mi portavo dentro. Tu sei unica e non smetterò mai di dirtelo.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Non sei solo una cartomante, sei anche una persona empatica che va al di là del consulto. Le tue parole mi hanno rincuorato, anche nei momenti più difficili.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Sei diventata il mio mentore, la mia seduta psicologica — e io stessa lo sono! Grazie per tutti i tuoi consigli, sono sempre stati preziosi. Hai sempre una parola gentile e confortante, e tante cose che mi hai suggerito mi hanno dato una svolta nella vita. Sei una brava persona, onesta, schietta, e fai il tuo lavoro con tanta empatia e dedizione.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+          <div class="quote-card">
+            <div class="quote-card__mark">&ldquo;</div>
+            <p class="quote-card__text">Ti ringrazio per tutto quello che hai fatto: mi hai aiutato tantissimo in questi due anni che ci conosciamo, in questo mio percorso di crescita personale, con consigli sempre giusti e appropriati.</p>
+            <div class="quote-card__attr">Cliente in consulto</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow">Iniziamo</div>
+    <h2>Pronta o pronto a fare chiarezza?</h2>
+    <p>Scrivimi su WhatsApp per raccontarmi cosa ti porta qui, oppure prenota direttamente il tuo consulto dal calendario.</p>
+    <div class="final__ctas">
+      <a class="btn btn--gold" href="https://wa.me/393770993956?text=Ciao%20Stella%20Orione%2C%20vorrei%20pi%C3%B9%20informazioni%20sui%20tuoi%20servizi%2C%20grazie%21%20%3A%29" target="_blank" rel="noopener">Scrivimi su WhatsApp</a>
+      <a class="btn btn--line" href="https://tinyurl.com/stellaorionecalendar" target="_blank" rel="noopener">Prenota un consulto</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot__mark">Stella Orione</div>
+    <div class="foot__social">
+      <a href="https://www.facebook.com/share/1bsbb7eoZV/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.9 3.77-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/_stellaorione" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.97.24 2.43.4a4.9 4.9 0 0 1 1.77 1.15 4.9 4.9 0 0 1 1.15 1.77c.16.46.35 1.26.4 2.43.06 1.25.07 1.65.07 4.85s0 3.6-.07 4.85c-.05 1.17-.24 1.97-.4 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.46.16-1.26.35-2.43.4-1.25.06-1.65.07-4.85.07s-3.6 0-4.85-.07c-1.17-.05-1.97-.24-2.43-.4a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.16-.46-.35-1.26-.4-2.43C2.21 15.6 2.2 15.2 2.2 12s0-3.6.07-4.85c.05-1.17.24-1.97.4-2.43a4.9 4.9 0 0 1 1.15-1.77A4.9 4.9 0 0 1 5.6 1.8c.46-.16 1.26-.35 2.43-.4C9.28 1.34 9.68 1.33 12 1.33Zm0 1.98c-3.15 0-3.52 0-4.76.07-1.02.05-1.57.21-1.94.35a3 3 0 0 0-1.1.71 3 3 0 0 0-.71 1.1c-.14.37-.3.92-.35 1.94-.06 1.24-.07 1.6-.07 4.76s0 3.52.07 4.76c.05 1.02.21 1.57.35 1.94.15.4.35.75.71 1.1.35.36.7.56 1.1.71.37.14.92.3 1.94.35 1.24.06 1.6.07 4.76.07s3.52 0 4.76-.07c1.02-.05 1.57-.21 1.94-.35a3 3 0 0 0 1.1-.71 3 3 0 0 0 .71-1.1c.14-.37.3-.92.35-1.94.06-1.24.07-1.6.07-4.76s0-3.52-.07-4.76c-.05-1.02-.21-1.57-.35-1.94a3 3 0 0 0-.71-1.1 3 3 0 0 0-1.1-.71c-.37-.14-.92-.3-1.94-.35-1.24-.07-1.61-.07-4.76-.07Zm0 3.37a5.45 5.45 0 1 1 0 10.9 5.45 5.45 0 0 1 0-10.9Zm0 1.98a3.47 3.47 0 1 0 0 6.94 3.47 3.47 0 0 0 0-6.94Zm5.66-2.2a1.28 1.28 0 1 1 0 2.55 1.28 1.28 0 0 1 0-2.55Z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@_stellaorione" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path d="M14.5 2h2.9c.15 1.36.72 2.5 1.62 3.35.9.85 2.02 1.4 3.35 1.53v2.94a7.7 7.7 0 0 1-3.34-.83 7.9 7.9 0 0 1-1.6-1.1v7.05c0 1.7-.5 3.13-1.5 4.28-1 1.16-2.42 1.78-4.16 1.78-1.66 0-3.03-.56-4-1.63-.98-1.06-1.47-2.4-1.47-3.98 0-1.62.53-2.98 1.58-4.02 1.05-1.05 2.42-1.58 4.06-1.58.35 0 .68.02 1 .08v3.01a3.2 3.2 0 0 0-1-.15c-.86 0-1.56.28-2.1.85-.53.56-.8 1.27-.8 2.12 0 .87.27 1.58.8 2.13.54.56 1.24.84 2.1.84.9 0 1.63-.3 2.2-.9.57-.6.86-1.42.86-2.46V2Z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@stellaorione" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M21.6 7.2s-.21-1.5-.86-2.16c-.82-.87-1.74-.87-2.16-.92C15.6 4 12 4 12 4h-.01s-3.6 0-6.58.12c-.42.05-1.34.05-2.16.92-.65.66-.86 2.16-.86 2.16S2.16 9 2.16 10.7v1.58c0 1.72.18 3.44.18 3.44s.21 1.5.85 2.16c.83.87 1.9.84 2.38.93 1.73.17 7.35.22 7.35.22s3.6 0 6.58-.13c.42-.06 1.34-.06 2.16-.93.65-.66.86-2.16.86-2.16s.18-1.72.18-3.44V10.7c0-1.7-.18-3.5-.18-3.5ZM9.94 14.6V8.8l5.6 2.9-5.6 2.9Z"/></svg>
+      </a>
+      <a href="mailto:stellaorione@proton.me" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm1.4 2 7.6 5.7L19.6 7H4.4ZM4 8.4V18h16V8.4l-8 6-8-6Z"/></svg>
+      </a>
+    </div>
+    <p class="foot__legal">
+      Stella Orione di Maria Palma Gallo — P.IVA 02798180390<br/>
+      Via Dini e Salvalai 88, 48024 Massa Lombarda (RA)<br/>
+      Email: <a href="mailto:stellaorione@proton.me">stellaorione@proton.me</a> · <a href="https://wa.me/393770993956" target="_blank" rel="noopener">WhatsApp</a>
+    </p>
+    <p class="foot__disclaimer">I consulti di cartomanzia e numerologia sono percorsi di intrattenimento e crescita personale e non sostituiscono consulenze mediche, legali, psicologiche o finanziarie professionali.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+// Motore di calcolo della Matrice del Destino
+function sumDigits(n){ return String(Math.abs(n)).split('').reduce((s,d)=>s+parseInt(d,10),0); }
+function R(n){ while(n>22){ n = sumDigits(n); } if(n<=0) n = 22; return n; }
+
+function calcola(day, month, year){
+  const A = R(day), B = R(month), C = R(sumDigits(year));
+  const D = R(A+B+C);           // scopo (basso)
+  const E = R(A+B+C+D);         // centro
+  const UL = R(A+B), UR = R(B+C), LR = R(C+D), LL = R(D+A);
+  const F = R(A+B+C+D+E);       // somma totale (destra del centro)
+  const G = R(F+E);
+
+  // catene sugli assi: X = R(P+E), P2 = R(P+X), verde = R(X+E)
+  function asse(P){ const X=R(P+E); return { x:X, near:R(P+X), green:R(X+E) }; }
+  const left = asse(A), top = asse(B), right = asse(C), bottom = asse(D);
+
+  // catene sulle diagonali: K1 = R(K+F), K2 = R(K+K1)
+  function diag(K){ const K1=R(K+F); return { k1:K1, k2:R(K+K1) }; }
+  const dUL = diag(UL), dUR = diag(UR), dLR = diag(LR), dLL = diag(LL);
+
+  // linea amore / denaro
+  const amore = bottom.x, denaro = right.x;
+  const equilibrio = R(amore+denaro);
+  const versoDenaro = R(equilibrio+denaro);
+  const versoAmore  = R(amore+equilibrio);
+
+  // scopi
+  const cielo = R(B+D), terra = R(A+C), scopoPersonale = R(cielo+terra);
+  const maschile = R(UL+LR), femminile = R(UR+LL), scopoSociale = R(maschile+femminile);
+  const scopoSpirituale = R(scopoPersonale+scopoSociale);
+  const scopoPlanetario = R(scopoSociale+scopoSpirituale);
+
+  // anni: 8 segmenti in senso orario partendo da A (0 anni)
+  const ring = [A,UL,B,UR,C,LR,D,LL,A];
+  const anni = [];
+  for(let s=0;s<8;s++){
+    const P=ring[s], Q=ring[s+1], base=s*10;
+    const m=R(P+Q), q1=R(P+m), q2=R(m+Q);
+    anni.push({ from:base, to:base+10, P, Q,
+      ticks:[
+        {age:base+1.5,   v:R(P+q1), label:`${base+1}-${base+2}`},
+        {age:base+2.5,   v:q1,      label:`${base+2}-${base+3}`},
+        {age:base+3.5,   v:R(q1+m), label:`${base+3}-${base+4}`},
+        {age:base+5,     v:m,       label:`${base+5}`},
+        {age:base+6.5,   v:R(m+q2), label:`${base+6}-${base+7}`},
+        {age:base+7.5,   v:q2,      label:`${base+7}-${base+8}`},
+        {age:base+8.5,   v:R(q2+Q), label:`${base+8}-${base+9}`},
+      ]});
+  }
+
+  // carta del benessere (fisica = asse orizzontale, energia = asse verticale)
+  const chakra = [
+    ['Sahasrara',    A,          B],
+    ['Ajna',         left.near,  top.near],
+    ['Visuddha',    left.x,     top.x],
+    ['Anahata',      left.green, top.green],
+    ['Manipura',     E,          E],
+    ['Svadhistana', right.x,    bottom.x],
+    ['Muladhara',    C,          D],
+  ].map(([n,f,e])=>({name:n, fisica:f, energia:e, emozioni:R(f+e)}));
+  const tot = { fisica:R(chakra.reduce((s,c)=>s+c.fisica,0)),
+                energia:R(chakra.reduce((s,c)=>s+c.energia,0)) };
+  tot.emozioni = R(chakra.reduce((s,c)=>s+c.emozioni,0));
+
+  return {A,B,C,D,E,F,G,UL,UR,LR,LL,left,top,right,bottom,dUL,dUR,dLR,dLL,
+          amore,denaro,equilibrio,versoDenaro,versoAmore,
+          cielo,terra,scopoPersonale,maschile,femminile,scopoSociale,scopoSpirituale,scopoPlanetario,
+          anni,chakra,tot};
+}
+
+const CX=300,CY=300,RO=180;
+function pol(deg,r){const a=(deg-90)*Math.PI/180;return {x:CX+r*Math.cos(a),y:CY+r*Math.sin(a)};}
+const f1=n=>n.toFixed(1);
+function node(p,v,r,stroke,fs,big){return '<circle cx="'+f1(p.x)+'" cy="'+f1(p.y)+'" r="'+r+'" fill="var(--surface)" stroke="'+stroke+'" stroke-width="'+(r>=16?2:1.4)+'"/><text class="n" x="'+f1(p.x)+'" y="'+f1(p.y+fs*0.36)+'" text-anchor="middle" font-size="'+fs+'"'+(big?' fill="var(--accent)"':'')+'>'+v+'</text>';}
+function line(a,b,stroke,w,dash){return '<line x1="'+f1(a.x)+'" y1="'+f1(a.y)+'" x2="'+f1(b.x)+'" y2="'+f1(b.y)+'" stroke="'+stroke+'" stroke-width="'+w+'"'+(dash?' stroke-dasharray="5 4"':'')+'/>';}
+const GOLD='var(--gold)',VIO='var(--violet)',LIL='var(--lilac)',LINE='var(--line)',SOFT='var(--line-soft)',BLU='var(--pastel-blue)',ORA='#D08A3A',ROSE='#B85C6E',GRN='#7FAF7A';
+
+function drawSVG(v,el){
+  const deg={B:0,UR:45,C:90,LR:135,D:180,LL:225,A:270,UL:315};
+  const P={};for(const k in deg)P[k]=pol(deg[k],RO);
+  const poly=ks=>ks.map(k=>f1(P[k].x)+','+f1(P[k].y)).join(' ');
+  let s='';
+  s+='<polygon points="'+poly(['A','B','C','D'])+'" fill="none" stroke="'+LINE+'" stroke-width="1.2"/>';
+  s+='<polygon points="'+poly(['UL','UR','LR','LL'])+'" fill="none" stroke="'+LINE+'" stroke-width="1.2"/>';
+  s+='<polygon points="'+poly(['A','UL','B','UR','C','LR','D','LL'])+'" fill="none" stroke="'+SOFT+'" stroke-width="1"/>';
+  s+='<circle cx="'+CX+'" cy="'+CY+'" r="130" fill="none" stroke="'+LINE+'" stroke-width="1"/>';
+  s+=line(P.A,P.C,LINE,1)+line(P.B,P.D,LINE,1);
+  s+=line(P.UL,P.LR,BLU,1.4)+line(P.UR,P.LL,ROSE,1.4);
+  const lm=pol(315,72),lf=pol(45,72);lm.x+=7;lm.y-=7;lf.x-=7;lf.y-=7;
+  s+='<text x="'+lm.x+'" y="'+lm.y+'" font-size="6.5" fill="'+BLU+'" transform="rotate(45 '+lm.x+' '+lm.y+')" text-anchor="middle">programma generazionale maschile</text>';
+  s+='<text x="'+lf.x+'" y="'+lf.y+'" font-size="6.5" fill="'+ROSE+'" transform="rotate(-45 '+lf.x+' '+lf.y+')" text-anchor="middle">programma generazionale femminile</text>';
+  const pAm=pol(180,62),pDe=pol(90,124);
+  s+=line(pAm,pDe,ORA,1.3,true);
+  s+=node(pol(270,140),v.left.near,14,VIO,13)+node(pol(270,108),v.left.x,12,BLU,12)+node(pol(270,62),v.left.green,13,GRN,12);
+  s+=node(pol(0,140),v.top.near,14,VIO,13)+node(pol(0,108),v.top.x,12,BLU,12)+node(pol(0,62),v.top.green,13,GRN,12);
+  s+=node(pol(90,46),v.F,12,SOFT,12)+node(pol(90,80),v.G,12,SOFT,12)+node(pDe,v.right.x,13,ORA,12)+node(pol(90,150),v.right.near,12,LINE,12);
+  s+=node(pAm,v.bottom.x,13,ORA,12)+node(pol(180,108),v.bottom.near,13,LINE,12);
+  const mid={x:(pAm.x+pDe.x)/2,y:(pAm.y+pDe.y)/2},q1={x:(pAm.x+mid.x)/2,y:(pAm.y+mid.y)/2},q2={x:(mid.x+pDe.x)/2,y:(mid.y+pDe.y)/2};
+  s+=node(mid,v.equilibrio,12,LINE,12)+node(q1,v.versoAmore,11,LINE,11)+node(q2,v.versoDenaro,11,LINE,11);
+  s+='<text x="'+(CX+24)+'" y="'+(CY+86)+'" font-size="15" fill="'+ROSE+'">♥</text><text x="'+(q2.x+2)+'" y="'+(q2.y-16)+'" font-size="14" fill="'+GRN+'" font-weight="700">$</text>';
+  const D2={UL:v.dUL,UR:v.dUR,LR:v.dLR,LL:v.dLL};
+  for(const k in D2){s+=node(pol(deg[k],143),D2[k].k2,13,LINE,12)+node(pol(deg[k],112),D2[k].k1,12,LINE,12);}
+  s+=node({x:CX,y:CY},v.E,26,GOLD,22,true);
+  const col={A:VIO,B:VIO,C:ROSE,D:ROSE};
+  for(const k in P){const c=col[k];s+=node(P[k],v[k],c?24:19,c||LINE,c?21:17);}
+  const ages={A:'0 anni',UL:'10 anni',B:'20 anni',UR:'30 anni',C:'40 anni',LR:'50 anni',D:'60 anni',LL:'70 anni'};
+  for(const k in ages){const p=pol(deg[k],RO+46);s+='<text class="age" x="'+p.x+'" y="'+(p.y+3)+'" text-anchor="middle" font-size="9">'+ages[k]+'</text>';}
+  const order=['A','UL','B','UR','C','LR','D','LL','A'];
+  v.anni.forEach((seg,i)=>{const a=P[order[i]],b=P[order[i+1]];seg.ticks.forEach(t=>{
+    const f=(t.age-seg.from)/10,x=a.x+(b.x-a.x)*f,y=a.y+(b.y-a.y)*f,dx=x-CX,dy=y-CY,L=Math.hypot(dx,dy),ux=dx/L,uy=dy/L,big=t.label.indexOf('-')<0;
+    s+='<circle cx="'+f1(x+ux*6)+'" cy="'+f1(y+uy*6)+'" r="'+(big?2.2:1.4)+'" fill="'+GOLD+'"/>';
+    s+='<text class="n" x="'+f1(x+ux*18)+'" y="'+f1(y+uy*18+3)+'" text-anchor="middle" font-size="'+(big?9:8)+'">'+t.v+'</text>';
+    s+='<text class="tick" x="'+f1(x+ux*31)+'" y="'+f1(y+uy*31+2.5)+'" text-anchor="middle" font-size="6">'+t.label+'</text>';
+  });});
+  el.innerHTML=s;
+}
+const $=id=>document.getElementById(id);
+function track(name){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:name,title:name,event:true});}catch(e){}}
+document.querySelectorAll('a[href="#servizi"]').forEach(a=>a.addEventListener('click',()=>track('click-scopri-consulti')));
+document.querySelectorAll('a[href*="wa.me"]').forEach(a=>a.addEventListener('click',()=>track('click-whatsapp')));
+const bubs=a=>a.map(n=>'<b class="bub">'+n+'</b>').join('');
+function ageFrom(y,m,d){const t=new Date();let a=t.getFullYear()-y;if(t.getMonth()+1<m||(t.getMonth()+1===m&&t.getDate()<d))a--;return a;}
+function parseDate(val){const [y,m,d]=val.split('-').map(x=>parseInt(x,10));return {y,m,d,str:String(d).padStart(2,'0')+'.'+String(m).padStart(2,'0')+'.'+y};}
+
+/* tabs */
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('is-active'));
+  document.querySelectorAll('.tool').forEach(x=>x.classList.remove('is-active'));
+  t.classList.add('is-active');$('tool-'+t.dataset.tool).classList.add('is-active');track('tab-'+t.dataset.tool);
+}));
+
+/* MATRICE */
+$('f-matrice').addEventListener('submit',e=>{
+  e.preventDefault();const dt=parseDate($('m-data').value);const v=calcola(dt.d,dt.m,dt.y);
+  const nome=$('m-nome').value.trim();
+  $('m-who').innerHTML=nome?'<b>'+nome+'</b>':'';$('m-date').textContent=dt.str;$('m-age').textContent=ageFrom(dt.y,dt.m,dt.d);
+  drawSVG(v,$('m-svg'));
+  const cols=['#7a4fa8','#5b6fe6','#5fc3d9','#a8d65c','#f0c85a','#d6a12f','#e05a5a'];
+  let tb='';v.chakra.forEach((c,i)=>{tb+='<tr><td class="idx" style="background:'+cols[i]+'">'+(i+1)+'</td><td>'+c.name+'</td><td class="v">'+c.fisica+'</td><td class="v">'+c.energia+'</td><td class="v">'+c.emozioni+'</td></tr>';});
+  tb+='<tr class="tot"><td class="idx" style="background:#b9b3c4"></td><td>Somma</td><td class="v">'+v.tot.fisica+'</td><td class="v">'+v.tot.energia+'</td><td class="v">'+v.tot.emozioni+'</td></tr>';
+  $('m-chakra').innerHTML=tb;
+  $('m-genM').innerHTML=bubs([v.UL,v.LR,v.maschile]);$('m-genF').innerHTML=bubs([v.UR,v.LL,v.femminile]);
+  $('m-cielo').textContent=v.cielo;$('m-terra').textContent=v.terra;$('m-pers').textContent=v.scopoPersonale;
+  $('m-M').textContent=v.maschile;$('m-F').textContent=v.femminile;$('m-soc').textContent=v.scopoSociale;$('m-spir').textContent=v.scopoSpirituale;
+  track('calcolo-matrice');$('r-matrice').classList.add('is-show');$('r-matrice').scrollIntoView({behavior:'smooth',block:'start'});
+});
+$('m-pdf').addEventListener('click',()=>{track('pdf-matrice');window.print();});
+
+/* CALDEA */
+const CH={A:1,I:1,J:1,Q:1,Y:1,B:2,K:2,R:2,C:3,G:3,L:3,S:3,D:4,M:4,T:4,E:5,H:5,N:5,X:5,U:6,V:6,W:6,O:7,Z:7,F:8,P:8};
+const norm=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toUpperCase().replace(/[^A-Z]/g,'');
+const toSingle=n=>{while(n>9){n=sumDigits(n);}return n;};
+const MEAN={1:'Guida, indipendenza, iniziativa',2:'Sensibilità, cooperazione, diplomazia',3:'Espressione, creatività, comunicazione',4:'Stabilità, metodo, concretezza',5:'Libertà, cambiamento, versatilità',6:'Armonia, cura, responsabilità',7:'Introspezione, ricerca, spiritualità',8:'Potere, ambizione, realizzazione',9:'Compassione, saggezza, chiusura dei cicli'};
+const COLS=[['A','I','J','Q','Y'],['B','K','R'],['C','G','L','S'],['D','M','T'],['E','H','N','X'],['U','V','W'],['O','Z'],['F','P'],[]];
+$('c-grid').innerHTML=COLS.map((c,i)=>'<div><div class="h">'+(i+1)+'</div>'+c.map(l=>'<div class="l">'+l+'</div>').join('')+'</div>').join('');
+$('f-caldea').addEventListener('submit',e=>{
+  e.preventDefault();
+  const full=norm($('c-nome').value+$('c-nome2').value+$('c-cognome').value);
+  let tot=0;const letters=[];for(const ch of full){const v=CH[ch]||0;tot+=v;letters.push([ch,v]);}
+  const red=toSingle(tot);
+  $('c-freq').innerHTML=tot+' <small>('+red+')</small>';
+  $('c-mean').textContent=MEAN[red]||'';
+  $('c-letters').innerHTML=letters.map(([c,v])=>'<span>'+c+'<i>'+v+'</i></span>').join('');
+  track('calcolo-caldea');$('r-caldea').classList.add('is-show');$('r-caldea').scrollIntoView({behavior:'smooth',block:'start'});
+});
+$('c-dl').addEventListener('click',()=>{
+  const cv=document.createElement('canvas');cv.width=1200;cv.height=900;const g=cv.getContext('2d');
+  g.fillStyle='#F8F2E7';g.fillRect(0,0,1200,900);
+  g.fillStyle='#2B2131';g.textAlign='center';g.font='600 40px Cinzel, Georgia, serif';g.fillText('TABELLA NUMEROLOGICA CALDEA',600,110);
+  g.strokeStyle='#A97F2E';g.lineWidth=2;g.beginPath();g.moveTo(150,140);g.lineTo(1050,140);g.stroke();
+  COLS.forEach((c,i)=>{const x=110+i*122;g.fillStyle='#A97F2E';g.font='600 54px Cinzel, Georgia, serif';g.fillText(String(i+1),x,240);g.fillStyle='#2B2131';g.font='46px "Cormorant Garamond", Georgia, serif';c.forEach((l,j)=>g.fillText(l,x,330+j*78));});
+  g.fillStyle='#5C4F60';g.font='24px Cinzel, Georgia, serif';g.fillText('STELLA ORIONE',600,840);
+  track('download-tabella-caldea');const a=document.createElement('a');a.href=cv.toDataURL('image/png');a.download='tabella-caldea.png';a.click();
+});
+
+/* COPPIA */
+function coppia(v1,v2){
+  const o={};['A','B','C','D','E','F','G','UL','UR','LR','LL','equilibrio','versoAmore','versoDenaro'].forEach(k=>o[k]=R(v1[k]+v2[k]));
+  const ax=(a,b)=>({x:R(a.x+b.x),near:R(a.near+b.near),green:R(a.green+b.green)});
+  o.left=ax(v1.left,v2.left);o.top=ax(v1.top,v2.top);o.right=ax(v1.right,v2.right);o.bottom=ax(v1.bottom,v2.bottom);
+  const dg=(a,b)=>({k1:R(a.k1+b.k1),k2:R(a.k2+b.k2)});
+  o.dUL=dg(v1.dUL,v2.dUL);o.dUR=dg(v1.dUR,v2.dUR);o.dLR=dg(v1.dLR,v2.dLR);o.dLL=dg(v1.dLL,v2.dLL);
+  o.anni=v1.anni.map((s,i)=>({from:s.from,to:s.to,ticks:s.ticks.map((t,j)=>({age:t.age,label:t.label,v:R(t.v+v2.anni[i].ticks[j].v)}))}));
+  return o;
+}
+$('f-coppia').addEventListener('submit',e=>{
+  e.preventDefault();
+  const d1=parseDate($('p1-data').value),d2=parseDate($('p2-data').value);
+  const v1=calcola(d1.d,d1.m,d1.y),v2=calcola(d2.d,d2.m,d2.y),c=coppia(v1,v2);
+  const n1=$('p1-nome').value.trim()||'Partner 1',n2=$('p2-nome').value.trim()||'Partner 2';
+  $('cp-n1').textContent=n1;$('cp-d1').textContent=d1.str;$('cp-n2').textContent=n2;$('cp-d2').textContent=d2.str;
+  $('cp-who').innerHTML=n1+' &amp; '+n2;
+  drawSVG(v1,$('cp-svg1'));drawSVG(v2,$('cp-svg2'));drawSVG(c,$('cp-svg'));
+  track('calcolo-coppia');$('r-coppia').classList.add('is-show');$('r-coppia').scrollIntoView({behavior:'smooth',block:'start'});
+});
+$('cp-pdf').addEventListener('click',()=>{track('pdf-coppia');window.print();});
+})();
+</script>
+
+</body>
+</html>
